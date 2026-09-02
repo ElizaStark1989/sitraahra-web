@@ -1,0 +1,37 @@
+.user-list {
+    min-height: 100vh;
+    padding: 40px;
+    text-align: center;
+}
+
+.users-table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+    padding: 14px;
+    border: 1px solid #d4af37;
+}
+
+.users-table th {
+    background-color: #2d163b;
+    color: white;
+}
+
+.users-table button {
+    margin: 0 5px;
+    padding: 8px 14px;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    background-color: #2d163b;
+    color: white;
+    cursor: pointer;
+}
+
+.users-table button:hover {
+    background-color: #5a2d82;
+}

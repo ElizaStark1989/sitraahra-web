@@ -1,0 +1,37 @@
+.roles {
+    min-height: 100vh;
+    padding: 40px;
+    text-align: center;
+}
+
+.roles h1 {
+    margin-bottom: 40px;
+}
+
+.roles-card {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.roles-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5a2d82;
+}
+
+.roles-card label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.roles-card input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}

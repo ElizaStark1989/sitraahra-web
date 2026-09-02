@@ -1,0 +1,34 @@
+.users {
+    min-height: 100vh;
+    padding: 40px;
+    text-align: center;
+}
+
+.users h1 {
+    margin-bottom: 40px;
+}
+
+.users-action {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.users-action button {
+    padding: 12px 24px;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    background-color: #2d163b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.users-action button:hover {
+  background-color: #5a2d82;
+}
+
+.module-link {
+    text-decoration: none;
+    color: inherit;
+}

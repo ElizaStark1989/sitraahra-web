@@ -1,0 +1,46 @@
+.delete-user {
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-user-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+}
+
+.delete-user-card h1 {
+    margin-bottom: 20px;
+}
+
+.delete-warning {
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.delete-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.delete-actions button {
+    padding: 10px 22px;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    background-color: #2d163b;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-actions button:hover {
+    background-color: #5a2d82;
+}
+
+
