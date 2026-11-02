@@ -8,21 +8,30 @@ import EditUser from "./modules/administration/users/EditUser";
 import DeleteUser from "./modules/administration/users/DeleteUser";
 import Roles from "./modules/administration/roles/Roles";
 import CreateRole from "./modules/administration/roles/CreateRole";
+import Login from "./auth/Login";
+import ProtectedRoute from "./auth/ProtectedRoute";
 
 function App() {
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/administration" element={<Administration />} />
-        <Route path="/administration/users" element={<Users />} />
-        <Route path="/administration/users/create" element={<CreateUser />} />
-        <Route path="/administration/users/list" element={<UserList />} />
-        <Route path="/administration/users/edit" element={<EditUser />} />
-        <Route path="/administration/users/delete" element={<DeleteUser />} />
-        <Route path="/administration/roles" element={<Roles />} />
-        <Route path="/administration/roles/create" element={<CreateRole />} />
+        {/* Ruta pública */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Rutas protegidas */}
+        <Route element={<ProtectedRoute />}>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/administration" element={<Administration />} />
+          <Route path="/administration/users" element={<Users />} />
+          <Route path="/administration/users/create" element={<CreateUser />} />
+          <Route path="/administration/users/list" element={<UserList />} />
+          <Route path="/administration/users/edit/:id" element={<EditUser />} />
+          <Route path="/administration/users/delete/:id" element={<DeleteUser />} />
+          <Route path="/administration/roles" element={<Roles />} />
+          <Route path="/administration/roles/create" element={<CreateRole />} />
+
+        </Route>
 
       </Routes>
     </BrowserRouter>

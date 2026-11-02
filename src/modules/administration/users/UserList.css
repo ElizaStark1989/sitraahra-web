@@ -35,3 +35,32 @@
 .users-table button:hover {
     background-color: #5a2d82;
 }
+
+.user-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px auto;
+}
+
+.user-search input {
+    width: 350px;
+    padding: 12px;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.user-search button {
+    padding: 12px 20px;
+    background-color: #2d163b;
+    color: white;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.user-search button:hover {
+    background-color: #5a2d82;
+}

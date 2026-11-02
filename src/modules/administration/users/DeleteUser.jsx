@@ -1,6 +1,27 @@
 import "./DeleteUser.css";
+import { useParams, useNavigate } from "react-router-dom";
 
-function DeleteUser () {
+function DeleteUser() {
+
+    const { id } = useParams();
+
+    const navigate = useNavigate();
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const selectedUser = users.find((user) => user.id === id);
+
+    const handleDelete = () => {
+
+        const updatedUsers = users.filter((user) => user.id !== id);
+
+        localStorage.setItem("users", JSON.stringify(updatedUsers));
+
+        navigate("/administration/users/list");
+
+    };
+
+
     return (
         <div className="delete-user">
 
@@ -9,7 +30,7 @@ function DeleteUser () {
 
                 <p>
                     ¿Está seguro de que desea eliminar al usuario
-                    <strong> María Gómez</strong>?
+                    <strong> {selectedUser?.name} </strong>?
                 </p>
 
                 <p className="delete-warning">
@@ -17,8 +38,15 @@ function DeleteUser () {
                 </p>
 
                 <div className="delete-actions">
-                    <button>Cancelar</button>
-                    <button>Eliminar</button>
+
+                    <button
+                        type="button"
+                        onClick={() => navigate("/administration/users/list")}
+                    >
+                        Cancelar</button>
+
+
+                    <button type="button" onClick={handleDelete}>Eliminar</button>
                 </div>
             </div>
 
