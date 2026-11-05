@@ -1,5 +1,6 @@
 import "./DeleteUser.css";
 import { useParams, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function DeleteUser() {
 
@@ -11,11 +12,19 @@ function DeleteUser() {
 
     const selectedUser = users.find((user) => user.id === id);
 
-    const handleDelete = () => {
+    const handleDelete = async () => {
 
         const updatedUsers = users.filter((user) => user.id !== id);
 
         localStorage.setItem("users", JSON.stringify(updatedUsers));
+
+        await Swal.fire({
+            title: "¡Usuario eliminado!",
+            text: "El usuario se eliminó correctamente.",
+            icon: "success",
+            confirmButtonText: "Aceptar",
+            confirmButtonColor: "#603b80"
+        });
 
         navigate("/administration/users/list");
 

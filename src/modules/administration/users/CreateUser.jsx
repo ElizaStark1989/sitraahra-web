@@ -1,14 +1,17 @@
 import "./CreateUser.css";
 import { useState } from "react";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 function CreateUser() {
 
+    const navigate = useNavigate();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [role, setRole] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const newUser = {
@@ -21,11 +24,40 @@ function CreateUser() {
 
         const savedUsers = JSON.parse(localStorage.getItem("users")) || [];
 
+        const emailExists = savedUsers.some(
+            (user) => user.email.toLowerCase() === email.trim().toLowerCase()
+        );
+
+        if (emailExists) {
+            await Swal.fire({
+                title: "Correo ya registrado",
+                text: "Ya existe un usuario con este correo electrónico.",
+                icon: "warning",
+                confirmButtonText: "Aceptar",
+                confirmButtonColor: "#603b80"
+            });
+
+            setName("");
+            setEmail("");
+            setPassword("");
+            setRole("");
+            
+            return;
+        }
+
         savedUsers.push(newUser);
 
         localStorage.setItem("users", JSON.stringify(savedUsers));
 
-        console.log("Nuevo usuario:", newUser);
+        await Swal.fire({
+            title: "¡Usuario creado!",
+            text: "El usuario se ha registrado correctamente.",
+            icon: "success",
+            confirmButtonText: "Aceptar",
+            confirmButtonColor: "#603b80"
+        });
+
+        navigate("/administration/users");
     };
 
     return (

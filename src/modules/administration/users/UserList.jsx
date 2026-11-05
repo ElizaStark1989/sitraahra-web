@@ -1,12 +1,35 @@
 import "./UserList.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 function UserList() {
 
     const users = JSON.parse(localStorage.getItem("users")) || [];
     const [search, setSearch] = useState("");
     const [selectedUser, setSelectedUser] = useState(null);
+
+    const handleSearch = () => {
+
+        const foundUser = users.find((user) =>
+            user.name.toLowerCase() === search.trim().toLowerCase() ||
+            user.email.toLowerCase() === search.trim().toLowerCase()
+        );
+
+        setSelectedUser(foundUser || null);
+
+        Swal.fire({
+            title: foundUser ? "Usuario encontrado" : "Usuario no encontrado",
+            text: foundUser
+                ? `Nombre: ${foundUser.name} - Correo: ${foundUser.email}`
+                : "No existe un usuario con ese nombre o correo.",
+            icon: foundUser ? "success" : "warning",
+            confirmButtonText: "Aceptar",
+            confirmButtonColor: "#603b80"
+        });
+
+    };
+
 
     return (
         <div className="user-list">
@@ -20,7 +43,7 @@ function UserList() {
                     onChange={(e) => setSearch(e.target.value)}
                 />
 
-                <button type="button">
+                <button type="button" onClick={handleSearch}>
                     Consultar usuario
                 </button>
             </div>

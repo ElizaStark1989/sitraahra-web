@@ -10,6 +10,7 @@ import Roles from "./modules/administration/roles/Roles";
 import CreateRole from "./modules/administration/roles/CreateRole";
 import Login from "./auth/Login";
 import ProtectedRoute from "./auth/ProtectedRoute";
+import NotFound from "./pages/NotFound";
 
 function App() {
 
@@ -32,6 +33,9 @@ function App() {
           <Route path="/administration/roles/create" element={<CreateRole />} />
 
         </Route>
+        
+        {/* Página no encontrada */}
+        <Route path="*" element={<NotFound />} />
 
       </Routes>
     </BrowserRouter>

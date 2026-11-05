@@ -55,6 +55,10 @@ function Login() {
                         />
                     </div>
 
+                    <button type="button" className="forgot-password">
+                        ¿Olvidaste tu contraseña?
+                    </button>
+
                     <button className="login-button" type="submit">
                         Iniciar sesión
                     </button>

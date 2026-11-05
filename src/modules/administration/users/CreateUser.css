@@ -2,6 +2,7 @@
     min-height: 100vh;
     padding: 40px;
     text-align: center;
+    background-color: #e8d9f3;
 }
 
 .create-user-form {
@@ -10,6 +11,7 @@
     padding: 30px;
     border: 1px solid #d4af37;
     border-radius: 10px;
+    background-color: #ffffff;
 }
 
 .form-group {

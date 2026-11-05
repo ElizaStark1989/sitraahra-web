@@ -1,6 +1,7 @@
 import "./EditUser.css";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 function EditUser() {
 
@@ -18,7 +19,7 @@ function EditUser() {
 
     console.log("ID del usuario:", id);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const updatedUsers = users.map((user) =>
@@ -28,13 +29,18 @@ function EditUser() {
         );
 
         localStorage.setItem("users", JSON.stringify(updatedUsers));
+
+        await Swal.fire({
+            title: "¡Usuario actualizado!",
+            text: "Los cambios se guardaron correctamente.",
+            icon: "success",
+            confirmButtonText: "Aceptar",
+            confirmButtonColor: "#603b80"
+        });
+
         navigate("/administration/users/list");
 
-        console.log("Usuarios actualizados:", updatedUsers);
 
-        console.log("Nombre:", name);
-        console.log("Correo:", email);
-        console.log("Rol:", role);
     };
 
     return (
