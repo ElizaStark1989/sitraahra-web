@@ -1,0 +1,89 @@
+.edit-client {
+    min-height: 100vh;
+    padding: 50px 20px;
+    background-color: #e8d9f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.edit-client h1 {
+    color: #43205f;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.edit-client form {
+    background-color: white;
+    padding: 35px;
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.edit-client form > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.edit-client label {
+    color: #43205f;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+
+.edit-client input {
+    padding: 12px;
+    border: 1px solid #c9b5d8;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.edit-client input:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+
+.edit-client button {
+    width: 100%;
+    padding: 13px;
+    background-color: #43205f;
+    color: white;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.edit-client button:hover {
+    background-color: #5c3080;
+    transform: translateY(-2px);
+}
+
+/* ===== DISEÑO RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+    .edit-client {
+        padding: 30px 15px;
+    }
+
+    .edit-client form {
+        padding: 25px 20px;
+    }
+
+    .edit-client h1 {
+        font-size: 26px;
+    }
+}

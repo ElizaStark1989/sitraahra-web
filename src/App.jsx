@@ -11,6 +11,12 @@ import CreateRole from "./modules/administration/roles/CreateRole";
 import Login from "./auth/Login";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import NotFound from "./pages/NotFound";
+import Clients from "./modules/clients/Clients";
+import CreateClient from "./modules/clients/CreateClient";
+import ClientList from "./modules/clients/ClientList";
+import EditClient from "./modules/clients/EditClient";
+import DeleteClient from "./modules/clients/DeleteClient";
+
 
 function App() {
 
@@ -31,6 +37,11 @@ function App() {
           <Route path="/administration/users/delete/:id" element={<DeleteUser />} />
           <Route path="/administration/roles" element={<Roles />} />
           <Route path="/administration/roles/create" element={<CreateRole />} />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/clients/create" element={<CreateClient />} />
+          <Route path="/clients/list" element={<ClientList />} />
+          <Route path="/clients/edit/:id" element={<EditClient />} />
+          <Route path="/clients/delete/:id" element={<DeleteClient />} />
 
         </Route>
         

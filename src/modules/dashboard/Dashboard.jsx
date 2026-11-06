@@ -6,10 +6,10 @@ function Dashboard() {
 
     <div className="dashboard">
       <div className="dashboard-content">
-        
+
         <header className="dashboard-header">
           <h1>SitraAhra Web</h1>
-        </header> 
+        </header>
 
         <div className="modules-grid">
 
@@ -19,9 +19,11 @@ function Dashboard() {
             </div>
           </Link>
 
-          <div className="module-card">
-            <h2>Gestión de Clientes</h2>
-          </div>
+          <Link to="/clients" className="module-link">
+            <div className="module-card">
+              <h2>Gestión de Clientes</h2>
+            </div>
+          </Link>
 
           <div className="module-card">
             <h2>Gestión de Pedidos</h2>

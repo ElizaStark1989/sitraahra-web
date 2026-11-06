@@ -1,0 +1,40 @@
+.clients {
+    min-height: 100vh;
+    padding: 50px 30px;
+    background-color: #e8d9f3;
+    text-align: center;
+}
+
+.clients h1 {
+    color: #43205f;
+    font-size: 32px;
+    margin-bottom: 45px;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.clients-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.clients-card {
+    background-color: white;
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 45px 20px;
+    box-shadow: 0 5px 15px rgba(67, 32, 95, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clients-card h2 {
+    color: #43205f;
+    font-size: 21px;
+    margin: 0;
+}
