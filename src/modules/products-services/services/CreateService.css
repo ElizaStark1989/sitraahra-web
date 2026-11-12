@@ -1,0 +1,134 @@
+/* Contenido del formulario modal */
+
+.create-service-content {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+
+.create-service-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.create-service-header h1 {
+    color: #5b347a;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.create-service-header p {
+    color: #555;
+    font-size: 15px;
+}
+
+/* Formulario */
+
+.create-service-form {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.create-service-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.create-service-field label {
+    color: #5b347a;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.create-service-field input,
+.create-service-field textarea,
+.create-service-field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c5a9d8;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.create-service-field input:focus,
+.create-service-field textarea:focus,
+.create-service-field select:focus {
+    border-color: #5b347a;
+    box-shadow: 0 0 5px rgba(91, 52, 122, 0.2);
+}
+
+.create-service-field textarea {
+    resize: vertical;
+}
+
+/* Botones */
+
+.create-service-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.create-service-cancel,
+.create-service-save {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-service-cancel {
+    background-color: #ddd;
+    color: #444;
+}
+
+.create-service-cancel:hover {
+    background-color: #c5c5c5;
+}
+
+.create-service-save {
+    background-color: #5b347a;
+    color: white;
+}
+
+.create-service-save:hover {
+    background-color: #744b96;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .create-service-header h1 {
+        font-size: 24px;
+    }
+
+    .create-service-form {
+        padding: 15px 5px;
+    }
+
+    .create-service-actions {
+        flex-direction: column-reverse;
+    }
+
+    .create-service-cancel,
+    .create-service-save {
+        width: 100%;
+    }
+
+}

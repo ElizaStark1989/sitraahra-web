@@ -16,6 +16,11 @@ import CreateClient from "./modules/clients/CreateClient";
 import ClientList from "./modules/clients/ClientList";
 import EditClient from "./modules/clients/EditClient";
 import DeleteClient from "./modules/clients/DeleteClient";
+import ProductsServices from "./modules/products-services/ProductsServices";
+import Products from "./modules/products-services/products/Products";
+import CreateProduct from "./modules/products-services/products/CreateProduct";
+import Services from "./modules/products-services/services/Services";
+import Orders from "./modules/orders/Orders";
 
 
 function App() {
@@ -42,6 +47,11 @@ function App() {
           <Route path="/clients/list" element={<ClientList />} />
           <Route path="/clients/edit/:id" element={<EditClient />} />
           <Route path="/clients/delete/:id" element={<DeleteClient />} />
+          <Route path="/products-services" element={<ProductsServices />} />
+          <Route path="/products-services/products" element={<Products />} />
+          <Route path="/products-services/products/create" element={<CreateProduct />} />
+          <Route path="/products-services/services" element={<Services />} />
+          <Route path="/orders" element={<Orders />} />
 
         </Route>
         

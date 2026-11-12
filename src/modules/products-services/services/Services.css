@@ -1,0 +1,152 @@
+/* Contenedor principal */
+
+.services {
+    min-height: 100vh;
+    background-color: #e8d9f3;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Contenido centrado */
+
+.services-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+
+.services-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services-header h1 {
+    color: #5b347a;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.services-header p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Botón registrar servicio */
+
+.services-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+.services-create-button {
+    background-color: #5b347a;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.services-create-button:hover {
+    background-color: #744b96;
+}
+
+/* Barra de búsqueda */
+
+.services-search {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.services-search .search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.services-search input {
+    width: 100%;
+    padding: 13px 15px 13px 42px;
+    border: 1px solid #c5a9d8;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.services-search input:focus {
+    border-color: #5b347a;
+    box-shadow: 0 0 5px rgba(91, 52, 122, 0.2);
+}
+
+/* Ventana modal */
+
+.service-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.service-modal {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    max-width: 750px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 2px solid #d4af37;
+    border-radius: 12px;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #5b347a;
+    font-size: 30px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.service-modal-close:hover {
+    color: #744b96;
+}
+
+/* Diseño responsive */
+
+@media (max-width: 600px) {
+    .services-header h1 {
+        font-size: 26px;
+    }
+
+    .services-actions {
+        justify-content: center;
+    }
+
+    .services-create-button {
+        width: 100%;
+    }
+}
+

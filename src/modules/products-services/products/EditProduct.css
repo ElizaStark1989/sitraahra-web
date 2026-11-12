@@ -1,0 +1,134 @@
+* Contenedor principal */
+
+.edit-product-content {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+/* Encabezado */
+
+.edit-product-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+
+.edit-product-header h1 {
+    color: #5b347a;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.edit-product-header p {
+    color: #555;
+    font-size: 15px;
+}
+
+/* Formulario */
+
+.edit-product-form {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 15px 10px;
+}
+
+/* Campos */
+
+.edit-product-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.edit-product-field label {
+    color: #5b347a;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.edit-product-field input,
+.edit-product-field textarea,
+.edit-product-field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c5a9d8;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: inherit;
+}
+
+.edit-product-field input:focus,
+.edit-product-field textarea:focus,
+.edit-product-field select:focus {
+    border-color: #5b347a;
+    box-shadow: 0 0 5px rgba(91, 52, 122, 0.2);
+}
+
+.edit-product-field textarea {
+    resize: vertical;
+}
+
+/* Botones */
+
+.edit-product-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.edit-product-cancel,
+.edit-product-save {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-product-cancel {
+    background-color: #ddd;
+    color: #444;
+}
+
+.edit-product-cancel:hover {
+    background-color: #c5c5c5;
+}
+
+.edit-product-save {
+    background-color: #5b347a;
+    color: white;
+}
+
+.edit-product-save:hover {
+    background-color: #744b96;
+}
+
+/* Diseño adaptable */
+
+@media (max-width: 600px) {
+
+    .edit-product-header h1 {
+        font-size: 24px;
+    }
+
+    .edit-product-form {
+        padding: 15px 5px;
+    }
+
+    .edit-product-actions {
+        flex-direction: column-reverse;
+    }
+
+    .edit-product-cancel,
+    .edit-product-save {
+        width: 100%;
+    }
+}

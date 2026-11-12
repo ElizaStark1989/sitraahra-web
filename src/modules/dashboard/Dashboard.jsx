@@ -25,13 +25,17 @@ function Dashboard() {
             </div>
           </Link>
 
-          <div className="module-card">
-            <h2>Gestión de Pedidos</h2>
-          </div>
+          <Link to="/orders" className="module-link">
+            <div className="module-card">
+              <h2>Gestión de Pedidos</h2>
+            </div>
+          </Link>
 
-          <div className="module-card">
-            <h2>Productos y Servicios</h2>
-          </div>
+          <Link to="/products-services" className="module-link">
+            <div className="module-card">
+              <h2>Productos y Servicios</h2>
+            </div>
+          </Link>
 
           <div className="module-card">
             <h2>Gestión Financiera</h2>

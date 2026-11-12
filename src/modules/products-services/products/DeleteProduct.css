@@ -1,0 +1,128 @@
+/* Contenedor principal */
+
+.delete-product-content {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 10px;
+}
+
+/* Encabezado */
+
+.delete-product-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.delete-product-header h1 {
+    color: #5b347a;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.delete-product-header p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Información del producto */
+
+.delete-product-info {
+    background-color: #f8f3fc;
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.delete-product-info h3 {
+    color: #5b347a;
+    font-size: 21px;
+    margin: 0 0 12px;
+}
+
+.delete-product-info p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.delete-product-info span {
+    display: inline-block;
+    background-color: #e8d9f3;
+    color: #5b347a;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Botones */
+
+.delete-product-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.delete-product-cancel,
+.delete-product-confirm {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botón cancelar */
+
+.delete-product-cancel {
+    background-color: #e8d9f3;
+    color: #5b347a;
+}
+
+.delete-product-cancel:hover {
+    background-color: #d8c1e9;
+    transform: translateY(-2px);
+}
+
+/* Botón eliminar */
+
+.delete-product-confirm {
+    background-color: #a83232;
+    color: white;
+}
+
+.delete-product-confirm:hover {
+    background-color: #872626;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 7px rgba(168, 50, 50, 0.2);
+}
+
+/* Diseño adaptable */
+
+@media (max-width: 600px) {
+
+    .delete-product-header h1 {
+        font-size: 24px;
+    }
+
+    .delete-product-info {
+        padding: 18px;
+    }
+
+    .delete-product-actions {
+        flex-direction: column-reverse;
+    }
+
+    .delete-product-cancel,
+    .delete-product-confirm {
+        width: 100%;
+    }
+}

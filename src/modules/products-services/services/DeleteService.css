@@ -1,0 +1,86 @@
+/* Contenedor de eliminación */
+
+.delete-service-content {
+    width: 100%;
+    text-align: center;
+}
+
+/* Título */
+
+.delete-service-content h2 {
+    color: #5b347a;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Mensaje de confirmación */
+
+.delete-service-content p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Nombre del servicio */
+
+.delete-service-content strong {
+    color: #5b347a;
+}
+
+/* Contenedor de botones */
+
+.delete-service-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Estilos generales de botones */
+
+.delete-service-cancel,
+.delete-service-confirm {
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botón cancelar */
+
+.delete-service-cancel {
+    background-color: #eeeeee;
+    color: #555;
+    border: 1px solid #cccccc;
+}
+
+.delete-service-cancel:hover {
+    background-color: #dddddd;
+}
+
+/* Botón eliminar */
+
+.delete-service-confirm {
+    background-color: #b3261e;
+    color: white;
+    border: none;
+}
+
+.delete-service-confirm:hover {
+    background-color: #8f1d17;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 600px) {
+    .delete-service-actions {
+        flex-direction: column;
+    }
+
+    .delete-service-cancel,
+    .delete-service-confirm {
+        width: 100%;
+    }
+}

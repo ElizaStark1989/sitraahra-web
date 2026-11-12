@@ -1,0 +1,141 @@
+.create-order {
+    width: 100%;
+}
+
+.create-order h2 {
+    color: #5b347a;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.create-order h3 {
+    color: #5b347a;
+    border-bottom: 1px solid #d4af37;
+    padding-bottom: 8px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.create-order-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.create-order-field label {
+    color: #5b347a;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.create-order-field input,
+.create-order-field select,
+.create-order-field textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c5a9d8;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.create-order-field input:focus,
+.create-order-field select:focus,
+.create-order-field textarea:focus {
+    outline: none;
+    border-color: #5b347a;
+    box-shadow: 0 0 5px rgba(91, 52, 122, 0.2);
+}
+
+.create-order-add-button {
+    background-color: #5b347a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.create-order-add-button:hover {
+    background-color: #744b96;
+}
+
+.create-order-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.create-order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.create-order-table th,
+.create-order-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 8px;
+    text-align: left;
+}
+
+.create-order-table th {
+    background-color: #e8d9f3;
+    color: #5b347a;
+}
+
+.create-order-remove-button {
+    background-color: #b94a48;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.create-order-remove-button:hover {
+    background-color: #963735;
+}
+
+.create-order-summary {
+    background-color: #f5eff9;
+    border: 1px solid #d4c1e2;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.create-order-summary p {
+    margin: 10px 0;
+}
+
+.create-order-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.create-order-actions button {
+    background-color: #5b347a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.create-order-actions button:hover {
+    background-color: #744b96;
+}
+
+@media (max-width: 600px) {
+    .create-order-actions {
+        flex-direction: column;
+    }
+
+    .create-order-actions button {
+        width: 100%;
+    }
+}

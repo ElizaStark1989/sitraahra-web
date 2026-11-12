@@ -1,0 +1,45 @@
+.order-list {
+    margin-top: 30px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.order-list h2 {
+    color: #5b347a;
+    margin-bottom: 20px;
+}
+
+.order-list-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.order-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.order-list-table th,
+.order-list-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5d8ee;
+}
+
+.order-list-table th {
+    background-color: #e8d9f3;
+    color: #5b347a;
+    font-weight: bold;
+}
+
+.order-list-table tbody tr:hover {
+    background-color: #f8f3fb;
+}
+
+.order-list-empty {
+    text-align: center !important;
+    color: #777;
+    padding: 25px !important;
+}

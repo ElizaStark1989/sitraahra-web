@@ -1,0 +1,134 @@
+/* Contenido del formulario modal */
+
+.edit-service-content {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+
+.edit-service-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.edit-service-header h1 {
+    color: #5b347a;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.edit-service-header p {
+    color: #555;
+    font-size: 15px;
+}
+
+/* Formulario */
+
+.edit-service-form {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.edit-service-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.edit-service-field label {
+    color: #5b347a;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.edit-service-field input,
+.edit-service-field textarea,
+.edit-service-field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c5a9d8;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.edit-service-field input:focus,
+.edit-service-field textarea:focus,
+.edit-service-field select:focus {
+    border-color: #5b347a;
+    box-shadow: 0 0 5px rgba(91, 52, 122, 0.2);
+}
+
+.edit-service-field textarea {
+    resize: vertical;
+}
+
+/* Botones */
+
+.edit-service-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.edit-service-cancel,
+.edit-service-save {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-service-cancel {
+    background-color: #ddd;
+    color: #444;
+}
+
+.edit-service-cancel:hover {
+    background-color: #c5c5c5;
+}
+
+.edit-service-save {
+    background-color: #5b347a;
+    color: white;
+}
+
+.edit-service-save:hover {
+    background-color: #744b96;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .edit-service-header h1 {
+        font-size: 24px;
+    }
+
+    .edit-service-form {
+        padding: 15px 5px;
+    }
+
+    .edit-service-actions {
+        flex-direction: column-reverse;
+    }
+
+    .edit-service-cancel,
+    .edit-service-save {
+        width: 100%;
+    }
+
+}

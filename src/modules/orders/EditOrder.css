@@ -1,0 +1,157 @@
+.edit-order {
+    width: 100%;
+    padding: 10px;
+}
+
+.edit-order h2 {
+    color: #5b347a;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.edit-order form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.edit-order-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.edit-order-field label {
+    color: #5b347a;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.edit-order-field input,
+.edit-order-field select,
+.edit-order-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    border: 1px solid #d8c4e8;
+    border-radius: 7px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.edit-order-field input:focus,
+.edit-order-field select:focus,
+.edit-order-field textarea:focus {
+    outline: none;
+    border-color: #744b96;
+}
+
+.edit-order-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.edit-order-buttons button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.edit-order-cancel {
+    background-color: #888;
+}
+
+.edit-order-save {
+    background-color: #5b347a;
+}
+
+.edit-order-save:hover {
+    background-color: #744b96;
+}
+
+/* Títulos de secciones */
+.edit-order h3 {
+    color: #5b347a;
+    font-size: 17px;
+    margin: 12px 0 5px;
+}
+
+/* Botón agregar */
+.edit-order-add {
+    background-color: #5b347a;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.edit-order-add:hover {
+    background-color: #744b96;
+}
+
+/* Contenedor de tabla */
+.edit-order-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Tabla de artículos */
+.edit-order-table {
+    width: 100%;
+    min-width: 550px;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.edit-order-table th,
+.edit-order-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e5d8ee;
+    text-align: left;
+}
+
+.edit-order-table th {
+    background-color: #e8d9f3;
+    color: #5b347a;
+}
+
+.edit-order-table input {
+    width: 65px;
+    padding: 7px;
+    border: 1px solid #d8c4e8;
+    border-radius: 5px;
+}
+
+/* Botón quitar artículo */
+.edit-order-remove {
+    background-color: #c44545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+/* Resumen financiero */
+.edit-order-summary {
+    background-color: #f8f3fb;
+    border: 1px solid #e5d8ee;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.edit-order-summary p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.edit-order-summary strong {
+    color: #5b347a;
+}
